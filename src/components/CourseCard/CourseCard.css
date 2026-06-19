@@ -113,3 +113,16 @@
   color: #c4b5fd;
   transform: translateX(4px);
 }
+
+
+@media (max-width: 600px) {
+  .course-container {
+    grid-template-columns: 1fr;
+    padding: 12px 16px;
+    gap: 16px;
+  }
+
+  .course-thumbnail {
+    height: 160px;
+  }
+}
