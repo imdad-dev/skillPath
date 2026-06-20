@@ -1,5 +1,6 @@
 import "./Hero.css";
 import heroImg from "../../assets/images/hero-banner.webp";
+import Button from "../Button/Button.jsx";
 
 const Hero = () => {
     return (
@@ -18,8 +19,8 @@ const Hero = () => {
 </p>
 
                 <div className="hero-buttons">
-                    <button className="btn btn-primary">Get Started</button>
-                    <button className="btn btn-secondary">Explore Roadmaps</button>
+                    <Button variant=" primary">Get Started</Button>
+                    <Button variant= "secondary">Explore Roadmaps</Button>
                 </div>
             </div>
 

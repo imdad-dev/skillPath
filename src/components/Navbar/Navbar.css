@@ -219,38 +219,7 @@
 
   background: rgba(255,255,255,0.08);
 }
-
-/* CTA Button */
-
-.get-started {
-  padding: 0.9rem 1.5rem;
-
-  border: none;
-
-  border-radius: 14px;
-
-  background: linear-gradient(
-    135deg,
-    #6366f1,
-    #8b5cf6
-  );
-
-  color: white;
-
-  font-size: 0.95rem;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-}
-
-.get-started:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 12px 25px rgba(99,102,241,0.35);
-}
+ 
 
 /* ==========================
    Responsive
@@ -292,7 +261,4 @@
     font-size: 1.2rem;
   }
 
-  .get-started {
-    padding: 0.8rem 0.95rem;
-  }
 }

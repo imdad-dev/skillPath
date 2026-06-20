@@ -1,5 +1,6 @@
 import './Navbar.css';
 import SearchBar from '../SearchBar/SearchBar.jsx';
+import Button from "../Button/Button.jsx";
 
 const Navbar = ()=>{
     return (
@@ -15,15 +16,6 @@ const Navbar = ()=>{
         <li><a href="/explore">Explore</a></li>
         <li><a href="/learn">Learn</a></li>
         <li><a href="/progress">Progress</a></li>
-
-        {/* more is dropdown section of More ▼
-├── AI Tutor
-├── Mock Interview
-├── ATS Checker
-├── Resume Builder
-├── Job Search
-├── Notes
-└── Community */}
 
      <li className="dropdown">
           <span>More ▼</span>
@@ -45,8 +37,8 @@ const Navbar = ()=>{
     <div className="nav-actions">
         {/* Theme button + Get Started */}
         
-         <button className="theme-toggle">🌙</button>
-        <button className="get-started">Get Started</button>
+         <Button variant ="icon">🌙</Button>
+        <Button  variant ="primary">Get Started</Button>
     </div>
 </nav>
     );
