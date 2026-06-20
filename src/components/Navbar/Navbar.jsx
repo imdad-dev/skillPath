@@ -1,4 +1,5 @@
 import './Navbar.css';
+import SearchBar from '../SearchBar/SearchBar.jsx';
 
 const Navbar = ()=>{
     return (
@@ -7,15 +8,7 @@ const Navbar = ()=>{
   🚀 SkillPath <span>AI</span>
 </div>
 
-  <div className="search-box">
-  <span className="search-icon">🔍</span>
-
-  <input
-    className="search-input"
-    type="text"
-    placeholder="Search skills, courses & growth paths..."
-  />
-</div>
+  <SearchBar  />
 
     <ul className="nav-links">
         {/* Explore Learn Progress More */}
