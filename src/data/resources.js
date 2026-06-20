@@ -67,7 +67,7 @@ const resources = [
     id: 9,
     title: "Data Structures and Algorithms in JavaScript",
     category: "DSA",
-    difficulty: "Advanced",
+    difficulty: "",
     description: "A deep dive into arrays, linked lists, trees, and common algorithm patterns — essential prep for technical interviews.",
     link: "#",
   },
