@@ -1,15 +1,20 @@
+/* Button.css — full updated version */
+
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.8rem 1.75rem;
-  border-radius: 14px;
-  font-size: 0.95rem;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 0.65rem 1.4rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+              background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn:hover {
@@ -40,25 +45,48 @@
   background: var(--social-bg);
 }
 
-/* Icon-only circular button — theme toggle and similar */
+.btn-success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  animation: complete-pop 0.3s ease;
+}
+
+.btn-success:hover {
+  background: rgba(16, 185, 129, 0.25);
+}
+
+@keyframes complete-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
 .btn-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   padding: 0;
   border-radius: 50%;
   background: var(--code-bg);
   border: 1px solid var(--border);
   color: var(--text-h);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .btn-icon:hover {
   background: var(--social-bg);
 }
 
+/* New: compact size for tight spaces like card footers */
+.btn-small {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
+  border-radius: 8px;
+}
+
 @media (max-width: 768px) {
   .btn {
-    padding: 0.7rem 1.25rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 }

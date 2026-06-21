@@ -1,14 +1,18 @@
 import "./Button.css";
 
-const Button = ({variant , children , onClick})=>{
+const Button = ({variant , size, children , onClick})=>{
 
 const variantClass = 
     variant ==="secondary" ? "btn-secondary " : 
-    variant==="icon" ? "btn-icon " :"btn-primary";
-
+    variant==="icon" ? "btn-icon " :
+    variant ==="success" ? "btn-success" :
+    "btn-primary";
+ 
+const sizeClass = 
+    size ==="small" ? "btn-small" : " ";
 
     return (
-        <button className={`btn ${variantClass}`} onClick={onClick}>        
+        <button className={`btn ${variantClass} ${sizeClass}`} onClick={onClick}>        
             {children}
         </button>
     );
