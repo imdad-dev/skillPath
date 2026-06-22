@@ -3,8 +3,7 @@
  import Button from "../Button/Button";
 import thumbnail from "../../assets/images/hero-banner.webp";
 const CourseCard = (props) => {
-
-const [completed , setCompleted] = useState (false);
+console.log(props);
 
 const getDifficultyClass = (difficulty) => { 
   if(difficulty === "Beginner") return "badge-beginner";
@@ -22,14 +21,14 @@ const getDifficultyClass = (difficulty) => {
         <span className="course-category">{props.category}</span>
         <span className={`course-difficulty ${getDifficultyClass(props.difficulty)}`}>{props.difficulty || "Not specified"}</span>
       </div>
-      <h3 className={`course-title ${completed ? "completed-title" : ""}`}>{props.title}</h3>
+      <h3 className={`course-title ${props.completed ? "completed-title" : ""}`}>{props.title}</h3>
       <p className="course-description">
         {props.description}
       </p>
    <div className="course-footer">
   <a href={props.link} className="course-link">View Course →</a>
-  <Button variant={completed ? "success" : "primary"} size="small" onClick={() => setCompleted(!completed)}>
-    {completed ? "Completed ✅" : "Mark as Complete"}
+  <Button variant={props.completed ? "success" : "primary"} size="small" onClick={() => props.onToggle( )}>
+    {props.completed ? "Completed ✅" : "Mark as Complete"}
   </Button>
 </div>
 
